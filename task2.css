@@ -1,0 +1,259 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Gluten', cursive;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(49, 13, 13, 0.925);
+    /* backdrop-filter: blur(100px); */
+    padding: 10px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+}
+.bg{
+   
+     background-attachment: fixed; 
+    /* background-size: cover; */
+     background-size: contain;
+    background-position: center;
+} 
+h1{
+    
+        text-align: center;
+        font-size: 50px; 
+        color: rgb(112, 3, 3); 
+     }
+h3{
+        text-align: center;
+ }
+
+.logo {
+    font-size: 2.4rem;
+    text-decoration: none;
+    color: blanchedalmond;
+    font-weight: 700;
+}
+
+.icons {
+    font-size: 2.8rem;
+    color: rgb(241, 194, 200);
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.navbar a {
+    font-size: 1.15rem;
+    text-decoration: none;
+    color: rgb(247, 184, 184);
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+
+
+.container-cards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    /* flex-wrap: nowrap; */
+}
+
+.card {
+    width: 300px;
+    border: 2px solid;
+    /* border-radius: 30px; */
+    margin: 10px;
+}
+
+img {
+    width: 100%;
+}
+.but{
+    float: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+button{
+    background-color: rgb(77, 47, 19);
+    color: rgb(242, 250, 135);
+    font-weight: bold;
+    font-family: cursive;
+    border: 1px solid color rgba(3, 3, 3, 0.712);
+}
+
+/* break points 
+480px-sm,768px-md,1028-lg,1280px-xl
+*/
+@media (max-width:480px) {
+    .container-cards{
+        display: flex;
+    }
+}
+@media (max-width:768px) {
+    .container-cards{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width:992px) {
+    .container-cards{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:992px) {
+    header {
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width:768px) {
+    .icons {
+        display: flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(100, 48, 48);
+        height: 0px;
+        display: none;
+    }
+
+    #check:checked~.navbar {
+        display: block;
+        height: 15rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+
+    p {
+        font-size: 25px;
+        line-height: 1.5;
+    }
+
+    .container-cards {
+        flex-wrap: wrap;
+    }
+}
+.col{
+    width: 250px;
+    height: 150px;
+    /* border: 1px solid; */
+    margin-top: 10px;
+    /* font-family: 'Courier New', Courier, monospace; */
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+#d1{
+    width: 450px;
+    /* flex-grow: 1; */
+} 
+#about{
+    padding-top: 50px;
+}
+#categories{
+    padding-top: 50px;
+}
+#contact{
+    margin: 8%;
+}
+.icon-collection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    /* border: solid 1px; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+}
+.icon:hover{
+    background-image: linear-gradient(to bottom right,white,black,brown
+    ,orange);
+}
+.brand{
+    color: black;
+    font-size: 30px;
+}
+.icon:hover .brand{
+    color: white;
+    animation: rotate 2s;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(30deg);
+    }
+    20%{
+        transform: rotate(-30deg);
+
+    }
+    40%{
+        transform: rotate(30deg);
+    }
+    60%{
+        transform: rotate(-30deg);
+
+    }
+    80%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(-30deg);
+
+    }
+}
+#copyright{
+    font-weight: 600;
+    text-align: center;
+}
+.up-arrow{
+    float: right;
+    margin: -40px 30px 30px 0px;
+}
